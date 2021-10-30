@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/doeringc/Projects/nn03/build",
+  "command": "/usr/bin/cc  -I/home/doeringc/Projects/nn03/include -g -std=gnu11 -o CMakeFiles/nn.dir/src/layer_mat.c.o -c /home/doeringc/Projects/nn03/src/layer_mat.c",
+  "file": "/home/doeringc/Projects/nn03/src/layer_mat.c"
+},
+{
+  "directory": "/home/doeringc/Projects/nn03/build",
+  "command": "/usr/bin/cc  -I/home/doeringc/Projects/nn03/include -g -std=gnu11 -o CMakeFiles/nn.dir/src/main.c.o -c /home/doeringc/Projects/nn03/src/main.c",
+  "file": "/home/doeringc/Projects/nn03/src/main.c"
+}
+]
