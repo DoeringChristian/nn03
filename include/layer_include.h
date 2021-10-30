@@ -1,5 +1,0 @@
-#ifndef LAYER_INCLUDE_H
-#define LAYER_INCLUDE_H
-
-
-#endif //LAYER_INCLUDE_H

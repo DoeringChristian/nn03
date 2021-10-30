@@ -1,6 +1,6 @@
 #include "layer_err.h"
 
-struct layer_err *layer_err_init(struct layer_err *dst, size_t in_size, float *ref){
+struct layer_err *layer_err_init(struct layer_err *dst, size_t in_size, size_t out_size){
     dst->interface.ops = &layer_err_ops;
     dst->interface.in = NULL;
     dst->interface.in_grad = NULL;
@@ -8,7 +8,7 @@ struct layer_err *layer_err_init(struct layer_err *dst, size_t in_size, float *r
     dst->interface.out_grad = NULL;
     dst->interface.in_size = in_size;
     dst->interface.out_size = 1;
-    dst->ref = ref;
+    dst->ref = NULL;
     return dst;
 }
 void layer_err_free(struct layer *dst){

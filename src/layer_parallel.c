@@ -1,15 +1,15 @@
 #include "layer_parallel.h"
 
-struct layer_parallel *layer_parallel_init(struct layer_parallel *dst, float (*func)(float x), float (*func_diff)(float x), size_t size){
+struct layer_parallel *layer_parallel_init(struct layer_parallel *dst, size_t in_size, size_t out_size){
     dst->interface.ops = &layer_parallel_ops;
     dst->interface.in = NULL;
     dst->interface.out = NULL;
     dst->interface.in_grad = NULL;
     dst->interface.out_grad = NULL;
-    dst->interface.in_size = size;
-    dst->interface.out_size = size;
-    dst->func = func;
-    dst->func_diff = func_diff;
+    dst->interface.in_size = out_size;
+    dst->interface.out_size = out_size;
+    dst->func = layer_parallel_sigmoid;
+    dst->func_diff = layer_parallel_sigmoid_diff;
     return dst;
 }
 void layer_parallel_free(struct layer *dst){
