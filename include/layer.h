@@ -2,6 +2,7 @@
 #define LAYER_H
 
 #include "nmath.h"
+#include "node.h"
 
 enum layer_type{
     LAYER_TYPE_MAT,
@@ -14,9 +15,8 @@ struct layer_ops;
 // in and in_grad / out and out_grad could be implemented as nx2 matrix
 struct layer{
     struct layer_ops *ops;
-    float *in, *in_grad;
-    float *out, *out_grad;
-    size_t in_size, out_size;
+
+    struct node_ctx in_ctx, out_ctx;
 };
 
 struct layer_ops{

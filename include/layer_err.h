@@ -8,7 +8,7 @@ struct layer_err{
     float *ref;
 };
 
-struct layer_err *layer_err_init(struct layer_err *dst, size_t in_size, size_t out_size);
+struct layer_err *layer_err_init(struct layer_err *dst, struct node_ctx in_ctx, struct node_ctx out_ctx);
 void layer_err_free(struct layer *dst);
 
 int layer_err_forward(struct layer *ctx);

@@ -16,7 +16,7 @@ struct layer_parallel{
     float (*func_diff)(float x);
 };
 
-struct layer_parallel *layer_parallel_init(struct layer_parallel *dst, size_t in_size, size_t out_size);
+struct layer_parallel *layer_parallel_init(struct layer_parallel *dst, struct node_ctx in_ctx, struct node_ctx out_ctx);
 void layer_parallel_free(struct layer *dst);
 
 int layer_parallel_forward(struct layer *ctx);

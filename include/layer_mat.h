@@ -8,7 +8,7 @@ struct layer_mat{
     float *mat, *mat_diff;
 };
 
-struct layer_mat *layer_mat_init(struct layer_mat *dst, size_t in_size, size_t out_size);
+struct layer_mat *layer_mat_init(struct layer_mat *dst, struct node_ctx in_ctx, struct node_ctx out_ctx);
 void layer_mat_free(struct layer *dst);
 
 int layer_mat_forward(struct layer *ctx);
